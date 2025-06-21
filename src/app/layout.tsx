@@ -5,9 +5,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "aos/dist/aos.css";
 
 import "@/assets/css/fontawesome.css";
-import "@/assets/css/style.css";
 import "@/assets/css/gallery.css";
+import "@/assets/css/style.css";
 
+import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import Script from "next/script";
 
@@ -22,9 +23,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ifnet Digital Hub",
+  title: "ReadShift Reading Assistant",
   description:
-    'At Ifnet, we provide digital-first solutions designed to help businesses grow, compete, and maximize profitability. We believe in "The New & Better Way", a smarter, more effective approach to branding, marketing, and digital presence.',
+    'At ReadShift, we provide digital-first solutions designed to help businesses grow, compete, and maximize profitability. We believe in "The New & Better Way", a smarter, more effective approach to branding, marketing, and digital presence.',
 };
 
 export default function RootLayout({
@@ -84,6 +85,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
 
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

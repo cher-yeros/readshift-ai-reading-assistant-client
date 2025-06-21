@@ -1,92 +1,164 @@
 export default function Contact() {
   return (
-    <section id="contact" className="get-started">
-      <div className="container">
-        <div className="row text-center" data-aos="fade-up">
-          <h1 className="display-3 fw-bold text-capitalize">Get started</h1>
-          <div className="heading-line"></div>
-          <p className="lh-lg">
-            Connect with us to ignite your digital transformation journey.
-          </p>
+    <section id="contact" className="contact section">
+      {/* <!-- Section Title --> */}
+      <div className="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <div>
+          <span>Let's</span> <span className="description-title">Connect</span>
         </div>
+      </div>
+      {/* <!-- End Section Title --> */}
 
-        {/* <!-- START THE CTA CONTENT  --> */}
-        <div className="row text-white">
-          <div className="col-12 col-lg-6 gradient shadow p-3">
-            <div className="cta-info w-100">
-              <h4 className="display-4 fw-bold">
-                100% Satisfaction Guaranteed
-              </h4>
-              <p className="lh-lg">
-                At Ifnet, your success is our top priority. We’re dedicated to
-                delivering tailor-made digital solutions that not only meet your
-                needs but exceed your expectations.
-              </p>
-              <h3 className="display-3--brief">What will be the next step?</h3>
-              <ul className="cta-info__list">
-                <li>We'll prepare the proposal.</li>
-                <li>we'll discuss it together.</li>
-                <li>let's start the discussion.</li>
-                <li>We'll kick-off your project.</li>
-              </ul>
+      <div className="container" data-aos="fade-up" data-aos-delay="100">
+        {/* <!-- Contact Info Boxes --> */}
+        <div className="row gy-4 mb-5">
+          <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div className="contact-info-box">
+              <div className="icon-box">
+                <i className="bi bi-geo-alt"></i>
+              </div>
+              <div className="info-content">
+                <h4>Our Address</h4>
+                <p>1842 Maple Avenue, Portland, Oregon 97204</p>
+              </div>
             </div>
           </div>
-          <div
-            className="col-12 col-lg-6 bg-white shadow p-3"
-            // data-aos="fade-up"
-            // data-aos-delay="200"
-          >
-            <div className="form w-100 pb-2">
-              <h4 className="display-3--title mb-5">start your project</h4>
+
+          <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div className="contact-info-box">
+              <div className="icon-box">
+                <i className="bi bi-envelope"></i>
+              </div>
+              <div className="info-content">
+                <h4>Email Address</h4>
+                <p>info@example.com</p>
+                <p>contact@example.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div className="contact-info-box">
+              <div className="icon-box">
+                <i className="bi bi-headset"></i>
+              </div>
+              <div className="info-content">
+                <h4>Hours of Operation</h4>
+                <p>Sunday-Fri: 9 AM - 6 PM</p>
+                <p>Saturday: 9 AM - 4 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* <!-- Google Maps (Full Width) --> */}
+      <div className="map-section" data-aos="fade-up" data-aos-delay="200">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+          width="100%"
+          height="500"
+          style={{ border: "0" }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      {/* <!-- Contact Form Section (Overlapping) --> */}
+      <div className="container form-container-overlap">
+        <div
+          className="row justify-content-center"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div className="col-lg-10">
+            <div className="contact-form-wrapper">
+              <h2 className="text-center mb-4">Get in Touch</h2>
+
               <form
-                action="https://formspree.io/f/xwplkoqa"
-                method="POST"
-                className="row"
+                action="forms/contact.php"
+                method="post"
+                className="php-email-form"
               >
-                <div className="col-lg-6 col-md mb-3">
-                  <input
-                    type="text"
-                    name="full_name"
-                    placeholder="Full Name"
-                    id="inputFirstName"
-                    className="shadow form-control form-control-lg"
-                  />
-                </div>
-                <div className="col-lg-6 col-md mb-3">
-                  <input
-                    type="tel"
-                    name="phone_number"
-                    placeholder="Phone Number"
-                    id="inputLastName"
-                    className="shadow form-control form-control-lg"
-                  />
-                </div>
-                <div className="col-lg-12 mb-3">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    id="inputEmail"
-                    className="shadow form-control form-control-lg"
-                  />
-                </div>
-                <div className="col-lg-12 mb-3">
-                  <textarea
-                    name="message"
-                    placeholder="Message"
-                    id="message"
-                    rows={8}
-                    className="shadow form-control form-control-lg"
-                  ></textarea>
-                </div>
-                <div className="text-center d-grid mt-1">
-                  <button
-                    type="submit"
-                    className="btn btn-primary rounded-pill pt-3 pb-3"
-                  >
-                    submit
-                    <i className="fas fa-paper-plane"></i>
-                  </button>
+                <div className="row g-3">
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <div className="input-with-icon">
+                        <i className="bi bi-person"></i>
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="name"
+                          placeholder="First Name"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <div className="input-with-icon">
+                        <i className="bi bi-envelope"></i>
+                        <input
+                          type="email"
+                          className="form-control"
+                          name="email"
+                          placeholder="Email Address"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-12">
+                    <div className="form-group">
+                      <div className="input-with-icon">
+                        <i className="bi bi-text-left"></i>
+                        <input
+                          type="text"
+                          className="form-control"
+                          name="subject"
+                          placeholder="Subject"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-12">
+                    <div className="form-group">
+                      <div className="input-with-icon">
+                        <i className="bi bi-chat-dots message-icon"></i>
+                        <textarea
+                          className="form-control"
+                          name="message"
+                          placeholder="Write Message..."
+                          style={{ height: "180px" }}
+                          required
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-12">
+                    <div className="loading">Loading</div>
+                    <div className="error-message"></div>
+                    <div className="sent-message">
+                      Your message has been sent. Thank you!
+                    </div>
+                  </div>
+
+                  <div className="col-12 text-center">
+                    <button
+                      type="submit"
+                      className="btn btn-primary btn-submit"
+                    >
+                      SEND MESSAGE
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>

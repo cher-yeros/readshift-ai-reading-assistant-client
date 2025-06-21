@@ -587,7 +587,7 @@ const websites = [
   },
   {
     image: "/assets/images/portfolio/ifnet.png",
-    title: "Ifnet Digital Hub",
+    title: "ReadShift Reading Assistant",
     // desc: "project name goes here 1",
     category: "web-development",
     link: "https://ifnet-digital-hub.vercel.app/",

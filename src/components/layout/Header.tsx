@@ -4,71 +4,44 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark menu fixed-top">
-      <div className="container">
-        <a className="navbar-brand" href="">
-          <img src="/assets/images/logo.png" alt="logo image" />
-        </a>
+    <header id="header" className="header d-flex align-items-center fixed-top">
+      <div className="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
         <a
-          className="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          href="#hero"
+          className="logo d-flex align-items-center me-auto me-xl-0"
         >
-          <span className="navbar-toggler-icon"></span>
-          {/* <i className="fa-solid fa-bars"></i>{" "} */}
+          {/* Uncomment to use an image logo */}
+          {/* <img src="assets/img/logo.webp" alt="Readshift Logo" /> */}
+          <h1 className="sitename">Readshift</h1>
         </a>
-        <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href={"/"}>
+
+        <nav id="navmenu" className="navmenu">
+          <ul>
+            <li>
+              <Link href="/" className="active">
                 Home
               </Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#services">
-                Services
-              </a>
+            <li>
+              <a href="#about">About</a>
             </li>
-            {/* <li className="nav-item">
-              <a className="nav-link" href="#testimonials">
-                Testimonials
-              </a>
+            <li>
+              <a href="#services">Services</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#faq">
-                FAQ
-              </a>
-            </li> */}
-            <li className="nav-item">
-              <a className="nav-link" href="#portfolio">
-                portfolio
-              </a>
+            <li>
+              <a href="#pricing">Pricing</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#contact">
-                contact
-              </a>
+            <li>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
-          <a
-            href="tel:+251985519439"
-            type="button"
-            className="rounded-pill btn-rounded"
-          >
-            +251 985 519 439
-            <span>
-              <i className="fas fa-phone-alt"></i>
-            </span>
-          </a>
-        </div>
+          <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <Link className="btn-getstarted" href="reading-assistat">
+          Get Started
+        </Link>
       </div>
-    </nav>
+    </header>
   );
 }
